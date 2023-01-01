@@ -39,12 +39,3 @@ class Vector {
     elements: this.xs
   });
 }
-
-const myVec = new Vector();
-
-myVec.print();
-myVec.push(5);
-myVec.push(5);
-myVec.push(5);
-console.log(myVec.pop());
-myVec.print();

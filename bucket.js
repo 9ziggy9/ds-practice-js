@@ -98,6 +98,14 @@ class Bucket {
     return this.length;
   }
 
+  lookup(key) {
+    let current = this.head;
+    while (current && current.key !== key) {
+      current = current.next;
+    }
+    return current;
+  }
+
   print(start=this.head) {
     if (start === null) {
       process.stdout.write(`null\n`);

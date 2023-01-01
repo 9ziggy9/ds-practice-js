@@ -31,6 +31,10 @@ class Table {
     this.buckets[Table.hash(key, this.capacity)].delete(key);
   }
 
+  findByKey(key) {
+    return this.buckets[Table.hash(key, this.capacity)].lookup(key);
+  }
+
   resize() {
     this.capacity *= 2;
     const og = this.buckets; // STORING STATE OF HASH TABLE
@@ -68,5 +72,4 @@ newTable.insert("Katlynn", 1);
 newTable.insert("Alan", 4);
 newTable.insert("William", 40);
 newTable.insert("Chase", 100);
-newTable.remove("Roberto");
-newTable.print();
+console.log(newTable.findByKey("Cameron"));

@@ -85,4 +85,16 @@ class List {
     }
     return this.print(start.next);
   }
+
+  show() {
+    console.log(JSON.stringify(this.head, null, 2));
+  }
 }
+
+const myList = new List();
+myList.append({"name": "David"});
+myList.append({"name": "Cory"});
+myList.append({"name": "Andrea"});
+myList.append({"name": "Cameron"});
+myList.append({"name": "Roberto"});
+myList.show();

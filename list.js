@@ -86,10 +86,3 @@ class List {
     return this.print(start.next);
   }
 }
-
-const myList = new List();
-myList.append(1);
-myList.append(2);
-myList.append(3);
-myList.daffix();
-myList.print();
